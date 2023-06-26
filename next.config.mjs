@@ -1,5 +1,4 @@
 import nextra from 'nextra';
-
 import remarkGfm from 'remark-gfm';
 import getNextData from './next.data.mjs';
 
@@ -36,4 +35,6 @@ export default withNextra({
   distDir: enableStaticExport ? 'build' : '.next',
   output: enableStaticExport ? 'export' : undefined,
   images: { unoptimized: enableStaticExport },
+  eslint: { dirs: ['.'] },
+  i18n: null,
 });
